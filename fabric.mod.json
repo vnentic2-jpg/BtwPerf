@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "legacyperf",
+  "version": "${version}",
+  "name": "LegacyPerf",
+  "description": "Performance optimizations for Legacy Fabric 1.6.4. Compatible with BTWCE and its addons.",
+  "authors": ["LegacyPerf Contributors"],
+  "contact": {
+    "sources": "https://github.com/yourname/legacyperf"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.legacyperf.LegacyPerf"]
+  },
+  "mixins": ["legacyperf.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.6.4"
+  },
+  "breaks": {}
+}
