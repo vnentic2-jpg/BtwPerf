@@ -3,9 +3,12 @@ plugins {
     id 'maven-publish'
 }
 
-archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -37,6 +40,6 @@ tasks.withType(JavaCompile).configureEach {
 
 jar {
     from("LICENSE") {
-        rename { "${it}_${project.archivesBaseName}" }
+        rename { "${it}_${project.base.archivesName.get()}" }
     }
 }
