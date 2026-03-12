@@ -1,5 +1,5 @@
 plugins {
-    id 'net.legacyfabric.legacy-looming' version '1.15.3'
+    id 'net.legacyfabric.legacy-looming' version '1.12.1'
     id 'maven-publish'
 }
 
