@@ -5,8 +5,9 @@ plugins {
 
 version = project.mod_version
 group = project.maven_group
-archivesBaseName = project.archives_base_name
-
+base {
+    archivesName = project.archives_base_name
+}
 repositories {
     maven { url 'https://repo.legacyfabric.net/repository/legacyfabric/' }
 }
