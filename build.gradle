@@ -18,7 +18,11 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.legacyfabric.legacy-fabric-api:legacy-fabric-api:${project.legacy_fabric_api_version}"
 }
-
+loom {
+    mixin {
+        add sourceSets.main, "legacyperf.refmap.json"
+    }
+}
 processResources {
     inputs.property "version", project.version
     filesMatching("fabric.mod.json") {
