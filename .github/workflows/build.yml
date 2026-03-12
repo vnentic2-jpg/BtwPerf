@@ -19,9 +19,9 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Install Gradle 8.11
+      - name: Install Gradle 8.14
         run: |
-          wget -q https://services.gradle.org/distributions/gradle-8.11-bin.zip
+          wget -q https://services.gradle.org/distributions/gradle-8.14-bin.zip
           unzip -q gradle-8.14-bin.zip
           echo "$PWD/gradle-8.14/bin" >> $GITHUB_PATH
 
