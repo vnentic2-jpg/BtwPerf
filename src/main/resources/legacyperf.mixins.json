@@ -7,7 +7,6 @@
   "client": [
     "EntityCullingMixin",
     "ParticleLimitMixin",
-    "ChunkRenderCullingMixin",
     "MemoryOptimizerMixin"
   ],
   "injectors": {
