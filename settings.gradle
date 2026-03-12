@@ -4,6 +4,13 @@ pluginManagement {
         maven { url 'https://maven.fabricmc.net/' }
         gradlePluginPortal()
     }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == 'net.legacyfabric.legacy-looming') {
+                useModule("net.legacyfabric:legacy-looming:${requested.version}")
+            }
+        }
+    }
 }
 
 rootProject.name = 'legacy-perf'
