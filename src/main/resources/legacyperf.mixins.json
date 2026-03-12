@@ -1,8 +1,9 @@
 {
-  "required": true,
+  "required": false,
   "minVersion": "0.8",
   "package": "com.legacyperf.mixin",
   "compatibilityLevel": "JAVA_8",
+  "refmap": "legacyperf.refmap.json",
   "mixins": [],
   "client": [
     "EntityCullingMixin",
