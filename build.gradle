@@ -3,17 +3,11 @@ plugins {
     id 'maven-publish'
 }
 
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
-
-base {
-    archivesName = 'legacy-perf'
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-}
 
 repositories {
     maven { url 'https://repo.legacyfabric.net/repository/legacyfabric/' }
@@ -36,10 +30,11 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
+    it.options.release = 8
 }
 
 jar {
     from("LICENSE") {
-        rename { "${it}_${project.base.archivesName.get()}" }
+        rename { "${it}_${project.archivesBaseName}" }
     }
 }
