@@ -6,7 +6,7 @@ pluginManagement {
     }
     resolutionStrategy {
         eachPlugin {
-            if (requested.id.id == 'net.legacyfabric.legacy-looming') {
+            if (requested.id.id == 'legacy-looming') {
                 useModule("net.legacyfabric:legacy-looming:${requested.version}")
             }
         }
