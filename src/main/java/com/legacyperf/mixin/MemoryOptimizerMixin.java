@@ -45,10 +45,7 @@ public class MemoryOptimizerMixin {
         long thresholdMb   = LegacyPerfConfig.memoryThresholdMb;
 
         if (freeMb < thresholdMb) {
-            LegacyPerf.LOGGER.debug(
-                "[LegacyPerf] Free heap {}MB < threshold {}MB – hinting GC",
-                freeMb, thresholdMb
-            );
+            System.out.println("[LegacyPerf] Free heap " + freeMb + "MB < threshold " + thresholdMb + "MB - hinting GC");
             System.gc();
         }
     }
