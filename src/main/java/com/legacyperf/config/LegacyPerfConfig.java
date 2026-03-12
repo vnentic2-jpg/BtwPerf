@@ -78,8 +78,7 @@ public class LegacyPerfConfig {
             try (FileReader reader = new FileReader(CONFIG_FILE)) {
                 props.load(reader);
             } catch (IOException e) {
-                LegacyPerf.LOGGER.warn("[LegacyPerf] Failed to read config, using defaults: {}", e.getMessage());
-            }
+                System.err.println("[LegacyPerf] Failed to read config, using defaults: " + e.getMessage());            }
         }
 
         entityCulling           = bool(props, "entityCulling",            entityCulling);
@@ -117,7 +116,7 @@ public class LegacyPerfConfig {
                 "# All boolean options accept: true / false\n" +
                 "# Reload by restarting, or use /legacyperf reload if the command addon is present");
         } catch (IOException e) {
-            LegacyPerf.LOGGER.warn("[LegacyPerf] Failed to save config: {}", e.getMessage());
+            System.err.println("[LegacyPerf] Failed to save config: " + e.getMessage());
         }
     }
 
